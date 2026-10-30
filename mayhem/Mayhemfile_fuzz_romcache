@@ -1,0 +1,9 @@
+project: savantenvs/rmg
+target: fuzz_romcache
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_romcache/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build/fuzz_romcache
+    libfuzzer: true
+    timeout: 5

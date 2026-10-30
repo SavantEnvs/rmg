@@ -1,0 +1,9 @@
+project: savantenvs/rmg
+target: fuzz_7z
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_7z/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build/fuzz_7z
+    libfuzzer: true
+    timeout: 5

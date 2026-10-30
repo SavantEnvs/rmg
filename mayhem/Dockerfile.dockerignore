@@ -1,0 +1,16 @@
+# Commit-image build context: keep the full repo incl. .git, drop local build artifacts.
+# Keep build artifacts out of the context — the COPY boundary is what separates
+# source from artifacts. build.sh produces its outputs under /mayhem at build time.
+# Adjust the patterns per project.
+build/
+out/
+*.o
+*.a
+*.so
+*.dylib
+**/__pycache__/
+
+# ── Editor / OS noise ────────────────────────────────────────────────────────
+.DS_Store
+*.swp
+*~
